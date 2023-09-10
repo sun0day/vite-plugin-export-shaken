@@ -1,0 +1,34 @@
+{
+  "name": "vite-plugin-export-shaken",
+  "private": true,
+  "version": "0.0.0",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup index.ts --dts --format esm,cjs",
+    "play": "pnpm build && cd playground && npm run dev"
+  },
+  "dependencies": {
+    "es-module-lexer": "^1.3.0",
+    "fast-glob": "^3.3.1",
+    "magic-string": "^0.30.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "tsup": "^7.2.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "peerDependencies": {
+    "vite": "^4.4.5"
+  }
+}
