@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import Shaken from 'vite-plugin-export-shaken'
+import Shaken from 'vite-plugin-import-proxy'
 import Inspect from 'vite-plugin-inspect'
 
 export default defineConfig({

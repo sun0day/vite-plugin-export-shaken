@@ -29,7 +29,7 @@ export default ({ map = {} }: ShakenPluginParams = {}) => {
 
   return {
     enforce: 'post',
-    name: 'vite:re-export-shaken',
+    name: 'vite:re-import-proxy',
 
     configureServer(_server) {
       isDev = 'pluginContainer' in _server
@@ -54,7 +54,7 @@ export default ({ map = {} }: ShakenPluginParams = {}) => {
 
       await init
       const imports = await parseImports(code, routes, this.resolve.bind(this)).catch(err => {
-        viteConfig.logger.warn(`[vite:re-export-shaken]: unable to parse imports of ${importer}, ${err.message ?? err}`)
+        viteConfig.logger.warn(`[vite:re-import-proxy]: unable to parse imports of ${importer}, ${err.message ?? err}`)
         return []
       })
 

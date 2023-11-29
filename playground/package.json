@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "vite": "^4.4.5",
-    "vite-plugin-export-shaken": "..",
+    "vite-plugin-import-proxy": "..",
     "vite-plugin-inspect": "^0.7.38"
   }
 }
